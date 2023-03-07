@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from 'react-router-dom';
+
+import AppMap from './pages/AppMap';
+import MainPage from 'pages/MainPage';
+import ErrorPage from 'pages/ErrorPage';
+import Quiz from 'components/quiz/Quiz';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<AppMap />} errorElement={<ErrorPage />}>
+      <Route index element={<MainPage />} />
+      <Route path='/:quizId' element={<Quiz />} />
+    </Route>
+  )
+);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

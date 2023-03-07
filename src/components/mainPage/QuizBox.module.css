@@ -1,0 +1,21 @@
+.quizes {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  width: 48%;
+  height: 18.75%;
+  margin: 1%;
+  background: linear-gradient(
+    225deg,
+    rgba(187, 130, 241, 1) 0%,
+    rgba(158, 85, 226, 1) 85%
+  );
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.quizes:hover {
+  opacity: 0.9;
+}

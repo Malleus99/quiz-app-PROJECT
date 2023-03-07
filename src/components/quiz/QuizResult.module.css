@@ -1,0 +1,27 @@
+h2,
+h1 {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 10rem;
+}
+.completion {
+  color: rgb(76, 0, 148);
+}
+.result {
+  margin-top: 10rem;
+}
+.passed,
+.failed {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.passed {
+  color: rgb(4, 231, 35);
+}
+
+.failed {
+  color: red;
+}
